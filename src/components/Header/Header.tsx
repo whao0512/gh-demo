@@ -1,5 +1,15 @@
 import React from "react";
-import { Layout, Menu, Form, Input, Button, Avatar, Badge } from "antd";
+import {
+  Layout,
+  Menu,
+  Form,
+  Input,
+  Button,
+  Avatar,
+  Badge,
+  Row,
+  Col,
+} from "antd";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -8,6 +18,8 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
+
+import styles from "../JobTable.module.scss";
 
 const { Header } = Layout;
 
@@ -71,23 +83,12 @@ const MyHeader: React.FC = () => {
         justifyContent: "space-between",
       }}
     >
-      <div>
-        <h3
-          style={{
-            float: "left",
-            width: 120,
-            height: 31,
-            lineHeight: "31px",
-            margin: "16px 0",
-          }}
-        >
-          Last Minutes
-        </h3>
-
+      <div className={styles.headerLeft}>
+        <h3 className={styles.logoName}>Last Minutes</h3>
         <Menu mode="horizontal" defaultSelectedKeys={["2"]} items={items} />
       </div>
 
-      <div style={{ paddingTop: 15 }}>
+      <div style={{ paddingTop: 15 }} className={styles.displayNone}>
         <Form layout={"inline"} form={form} style={{ maxWidth: 600 }}>
           <Form.Item>
             <Input placeholder="Search..." />

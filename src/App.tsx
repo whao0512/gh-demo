@@ -1,8 +1,10 @@
 import React from "react";
 import { Layout, theme } from "antd";
-import MyHeader from "./components/Header";
+import MyHeader from "./components/Header/Header";
 import MyCard from "./components/Card";
 import JobTable from "./components/JobTable";
+
+import styles from "./components/JobTable.module.scss";
 
 const { Content, Footer } = Layout;
 
@@ -10,13 +12,13 @@ const App: React.FC = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-  const siteLayout = {
-    padding: " 10px  50px 0",
-  };
+  // const siteLayout = {
+  //   padding: " 10px  50px 0",
+  // };
   return (
     <Layout>
       <MyHeader />
-      <Content style={siteLayout}>
+      <Content className={styles.siteLayout}>
         <div style={{ marginBottom: 10 }}>
           <MyCard />
         </div>

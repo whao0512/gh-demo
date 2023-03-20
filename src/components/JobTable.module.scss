@@ -1,0 +1,51 @@
+@media screen and (min-width: 670px) {
+    .siteLayout {
+        margin: 20px;
+    }
+    .logoName {
+            float: left;
+            width: 120px;
+            height: 31px;
+            line-height:31px;
+            margin: 16px 0;
+    }
+    .jobTableHeader {
+        display: flex;
+        justify-content: space-between; 
+    }
+    .jobTableHeaderTitle {
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .siteLayout {
+        margin:10px
+    }
+    .displayNone {
+        display: none;
+    }
+    .headerLeft {
+        width: 100%;
+        text-align: center;
+    }
+    .logoName {
+        float: left;
+        width: 96%;
+        height: 31px;
+        line-height:31px;
+        margin: 16px 0;
+    }
+    .jobTableHeader {
+        display: flex;
+        justify-content: center
+    }
+    .jobTableHeaderTitle {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .jobTableHeaderRight {
+        display: none;
+    }
+}

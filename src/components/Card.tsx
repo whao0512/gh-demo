@@ -32,10 +32,9 @@ const items: ICardItems[] = [
 
 const MyCard: React.FC = () => (
   <Row gutter={16}>
-    <Col span={4}></Col>
-    <Col span={4}></Col>
+    <Col sm={{ span: 4, offset: 4 }}></Col>
     {items.map((item) => (
-      <Col span={4} key={item.key}>
+      <Col sm={{ span: 4 }} xs={{ span: 24 }} key={item.key}>
         <Card hoverable size="small" style={{ textAlign: "right" }}>
           <div>{item.num}</div>
           <div>{item.label}</div>

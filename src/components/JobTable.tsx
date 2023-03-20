@@ -7,6 +7,7 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import type { ColumnsType } from "antd/es/table";
+import styles from "./JobTable.module.scss";
 
 interface DataType {
   key: string;
@@ -101,9 +102,9 @@ const TableHeader: React.FC = (props: any) => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <div style={{ fontWeight: "bold", fontSize: 20 }}>Jobs</div>
-      <>
+    <div className={styles.jobTableHeader}>
+      <div className={styles.jobTableHeaderTitle}>Jobs</div>
+      <div className={styles.jobTableHeaderRight}>
         <Form layout={"inline"} form={form} style={{ maxWidth: 600 }}>
           <Form.Item>
             <Input
@@ -128,7 +129,7 @@ const TableHeader: React.FC = (props: any) => {
             </Button>
           </Form.Item>
         </Form>
-      </>
+      </div>
     </div>
   );
 };
@@ -141,6 +142,7 @@ const JobTable: React.FC = () => {
       dataSource={dataSource}
       bordered
       title={() => TableHeader({ dataSource, setDataSource })}
+      scroll={{ x: 800, y: 300 }}
     />
   );
 };
