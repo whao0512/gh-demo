@@ -1,6 +1,7 @@
 import { Modal, Form, Input, InputNumber, Select } from "antd";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import React, { useState } from "react";
+// import MyForm from "./MyForm";
 
 interface PropsType {
   open: boolean;
@@ -55,7 +56,8 @@ const HModal = (props: PropsType) => {
         cancelText="取消"
         destroyOnClose={true}
       >
-        <Form
+        {/* <MyForm /> */}
+        {/* <Form
           form={form}
           preserve={false}
           labelCol={{ span: 4 }}
@@ -83,7 +85,7 @@ const HModal = (props: PropsType) => {
           <Form.Item label="address" name="address">
             <Input.TextArea />
           </Form.Item>
-        </Form>
+        </Form> */}
       </Modal>
     </>
   );

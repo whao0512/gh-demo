@@ -13,7 +13,7 @@ import {
 } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import type { TableRowSelection } from "antd/es/table/interface";
-import HModal from "./components/modal";
+import HModal from "./components/Modal";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 
 export interface DataType {
